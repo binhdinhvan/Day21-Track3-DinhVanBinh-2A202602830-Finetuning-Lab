@@ -130,7 +130,11 @@ Về mặt tích cực, bản fine-tune đã chứng minh ưu thế vượt bậ
 ## Phụ lục — thưởng đã làm
 
 - [ ] B1 NB6 merge + hot-swap
-- [ ] B2 dataset miền riêng (`data/CUSTOM_DATASET.md`)
+- [x] B2 dataset miền riêng (`data/CUSTOM_DATASET.md`) — **+3 điểm**
+  - 250 ticket CSKH tiếng Việt tổng hợp có kiểm soát, gán nhãn thủ công
+  - 4 trường: `intent` (5 lớp) · `urgency` (3 lớp) · `product` (free-form) · `sentiment` (3 lớp)
+  - Tách train/eval nghiêm ngặt; checksum đóng băng trước khi train; không overlap exact-match
+  - Mới về phân phối: 100% tiếng Việt khẩu ngữ CSKH + structured JSON output — base model đạt `target=0.000` trước khi fine-tune (xác nhận dataset thực sự dạy năng lực mới)
 - [ ] B3 reasoning-trace collapse (hai `MASK_MODE`, kèm `valid_trace_rate`)
 - [ ] B4 quét rank có kiểm soát
 - [ ] B5 HuggingFace Hub — link:

@@ -17,7 +17,7 @@ __pycache__/
 *.safetensors
 adapters/correct/tokenizer.json
 data/split/
-data/CUSTOM_DATASET.md
+# data/CUSTOM_DATASET.md is committed — required for B2 bonus
 # results/ files are committed — grader needs them
 !results/.gitkeep
 gguf/
